@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - FALCON</title>
+    <link rel="shortcut icon" href="/assets/pictures/favicon.svg" type="image/x-icon">
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="/assets/style/admin_panel.css">
+    <link rel="stylesheet" href="/assets/style/admin_responsive.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- sidebar starts here -->
+        <aside id="sidebar">
+            <div class="sidebar_top">
+                <a href="./dashboard.html"><img src="/assets/pictures/logo-light.svg" alt="" class="logo"></a>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="./dashboard.html" class="active">
+                                <img src="/assets/pictures/dashboard-icon.svg" alt=""> <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./profile.html">
+                                <img src="/assets/pictures/profile-icon.svg" alt=""> <span>Profile</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./users.html">
+                                <img src="/assets/pictures/users_icon.svg" alt=""> <span>Users</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./connections.html">
+                                <img src="/assets/pictures/connection-icon.svg" alt=""> <span>Connections</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./subscriptions.html">
+                                <img src="/assets/pictures/subscription-icon.svg" alt=""> <span>Subscriptions</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./payments.html">
+                                <img src="/assets/pictures/payment_icon.svg" alt=""> <span>Payments</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./dues.html">
+                                <img src="/assets/pictures/dues-icon.svg" alt=""> <span>Dues</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="sidebar_bottom">
+                <a href="/login.html">
+                    <img src="/assets/pictures/logout-icon.svg" alt=""> <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+        <!-- sidebar ends here -->
+
+        <!-- main section starts here -->
+        <section id="main">
+            <!-- topbar -->
+            <section id="topbar">
+                <div class="breadcrumb">
+                    <h1 class="page_title">dashboard</h1>
+                    <p class="msg">welcome admin! floor is your 🔥</p>
+                </div>
+                <div class="user">
+                    <a href="./profile.html">
+                        <img src="/assets/pictures/john-wick.jpg" alt="" class="user_image">
+                    </a>
+                </div>
+            </section>
+
+            <!-- main -->
+            <main id="dashboard">
+                <div class="card_container">
+                    <!-- user status -->
+                    <a href="./users.html" class="card">
+                        <div class="card_info">
+                            <img src="/assets/pictures/users_icon.svg" alt="" class="card_img">
+                            <h3 class="card_heading">Users</h3>
+                        </div>
+                        <p class="total">20</p>
+                    </a>
+
+                    <!-- connection status -->
+                    <a href="./connections.html" class="card">
+                        <div class="card_info">
+                            <img src="/assets/pictures/connection-icon.svg" alt="" class="card_img">
+                            <h3 class="card_heading">Connected</h3>
+                        </div>
+                        <p class="total">16</p>
+                    </a>
+
+                    <!-- dues status -->
+                    <a href="./dues.html" class="card">
+                        <div class="card_info">
+                            <img src="/assets/pictures/dues-icon.svg" alt="" class="card_img">
+                            <h3 class="card_heading">Dues</h3>
+                        </div>
+                        <p class="total">4</p>
+                    </a>
+
+                    <!-- subscription status -->
+                    <a href="./subscriptions.html" class="card">
+                        <div class="card_info">
+                            <img src="/assets/pictures/subscription-icon.svg" alt="" class="card_img">
+                            <h3 class="card_heading">Subscriptions</h3>
+                        </div>
+                        <p class="total">18</p>
+                    </a>
+
+                    <!-- payment status -->
+                    <a href="./payments.html" class="card">
+                        <div class="card_info">
+                            <img src="/assets/pictures/payment_icon.svg" alt="" class="card_img">
+                            <h3 class="card_heading">Pending Approval</h3>
+                        </div>
+                        <p class="total">2</p>
+                    </a>
+                </div>
+            </main>
+
+            <!-- footer -->
+            <footer id="footer">
+                © 2022 - <span>falcon</span> all right reserved
+            </footer>
+        </section>
+        <!-- main section ends here -->
+    </div>
+</body>
+
+</html>

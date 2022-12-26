@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Profile - FALCON</title>
+    <link rel="shortcut icon" href="/assets/pictures/favicon.svg" type="image/x-icon">
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="/assets/style/admin_panel.css">
+    <link rel="stylesheet" href="/assets/style/admin_responsive.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- sidebar starts here -->
+        <aside id="sidebar">
+            <div class="sidebar_top">
+                <a href="./dashboard.html"><img src="/assets/pictures/logo-light.svg" alt="" class="logo"></a>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="./dashboard.html">
+                                <img src="/assets/pictures/dashboard-icon.svg" alt=""> <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./profile.html" class="active">
+                                <img src="/assets/pictures/profile-icon.svg" alt=""> <span>Profile</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./users.html">
+                                <img src="/assets/pictures/users_icon.svg" alt=""> <span>Users</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./connections.html">
+                                <img src="/assets/pictures/connection-icon.svg" alt=""> <span>Connections</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./subscriptions.html">
+                                <img src="/assets/pictures/subscription-icon.svg" alt=""> <span>Subscriptions</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./payments.html">
+                                <img src="/assets/pictures/payment_icon.svg" alt=""> <span>Payments</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./dues.html">
+                                <img src="/assets/pictures/dues-icon.svg" alt=""> <span>Dues</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="sidebar_bottom">
+                <a href="/login.html">
+                    <img src="/assets/pictures/logout-icon.svg" alt=""> <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+        <!-- sidebar ends here -->
+
+        <!-- main section starts here -->
+        <section id="main">
+            <!-- topbar -->
+            <section id="topbar">
+                <div class="breadcrumb">
+                    <h1 class="page_title">Admin Profile</h1>
+                    <p class="msg">hey admin! its your profile 🔥</p>
+                </div>
+                <div class="user">
+                    <a href="./profile.html">
+                        <img src="/assets/pictures/john-wick.jpg" alt="" class="user_image">
+                    </a>
+                </div>
+            </section>
+
+            <!-- profile content -->
+            <main id="profile">
+                <div class="card personal_info">
+                    <div>
+                        <h3 class="heading">Personal Information</h3>
+                        <p>Update your photo and personal details here.</p>
+                    </div>
+                    <form action="" method="post" enctype="multipart/form-data">
+                        <div class="input">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" value="John">
+                        </div>
+                        <div class="input">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" value="johnwick@gmail.com">
+                        </div>
+                        <div class="input">
+                            <label for="phone">Phone</label>
+                            <input type="tel" name="phone" id="phone" value="01400492967" pattern="01+[0-9]{9}">
+                        </div>
+                        <div class="input">
+                            <label for="">Image</label>
+                            <div class="input_img">
+                                <img src="/assets/pictures/john-wick.jpg" alt="" class="user_image" id="image">
+                                <label for="uploadImage" class="upload_img">Upload your image</label>
+                                <input type="file" name="image" id="uploadImage" accept="image/*">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="buttons">
+                            <button class="button cancel" type="reset">Cancel</button>
+                            <button class="button action" type="submit">Save Changes</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="card password_info">
+                    <div>
+                        <h3 class="heading">Change Password</h3>
+                        <p>Update your password here.</p>
+                    </div>
+                    <form action="" method="post" enctype="multipart/form-data">
+                        <div class="input">
+                            <label for="old_password">Old Password</label>
+                            <input type="text" name="password" id="old_password" placeholder="Put you old password"
+                                pattern=".{8,}" required>
+                        </div>
+                        <div class="input">
+                            <label for="new_password">New Password</label>
+                            <input type="password" name="new_password" id="new_password"
+                                placeholder="Put your new password" pattern=".{8,}" required>
+                        </div>
+                        <hr>
+                        <div class="buttons">
+                            <button class="button action" type="submit">Save Changes</button>
+                        </div>
+                    </form>
+                </div>
+            </main>
+
+            <!-- footer -->
+            <footer id="footer">
+                © 2022 - <span>falcon</span> all right reserved
+            </footer>
+        </section>
+        <!-- main section ends here -->
+    </div>
+</body>
+
+</html>

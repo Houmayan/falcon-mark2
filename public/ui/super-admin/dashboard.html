@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Admin Dashboard - FALCON</title>
+    <link rel="shortcut icon" href="/assets/pictures/favicon.svg" type="image/x-icon">
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="/assets/style/admin_panel.css">
+    <link rel="stylesheet" href="/assets/style/admin_responsive.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- sidebar starts here -->
+        <aside id="sidebar">
+            <div class="sidebar_top">
+                <a href="./dashboard.html"><img src="/assets/pictures/logo-light.svg" alt="" class="logo"></a>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="./dashboard.html" class="active">
+                                <img src="/assets/pictures/dashboard-icon.svg" alt=""> <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./settings.html">
+                                <img src="/assets/pictures/settings-icon.svg" alt=""> <span>Settings</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./admins.html">
+                                <img src="/assets/pictures/admins-icon.svg" alt=""> <span>Admins</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./users.html">
+                                <img src="/assets/pictures/users_icon.svg" alt=""> <span>Users</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="sidebar_bottom">
+                <a href="/login.html">
+                    <img src="/assets/pictures/logout-icon.svg" alt=""> <span>Logout</span>
+                </a>
+            </div>
+        </aside>
+        <!-- sidebar ends here -->
+
+        <!-- main section starts here -->
+        <section id="main">
+            <!-- topbar -->
+            <section id="topbar">
+                <div class="breadcrumb">
+                    <h1 class="page_title">dashboard</h1>
+                    <p class="msg">welcome super admin! everyone is in your hand 🥱</p>
+                </div>
+                <div class="user">
+                    <img src="/assets/pictures/john-wick.jpg" alt="" class="user_image">
+                </div>
+            </section>
+
+            <!-- main -->
+            <main id="dashboard">
+                <div class="card_container">
+                    <!-- admins status -->
+                    <a href="./admins.html" class="card">
+                        <div class="card_info">
+                            <img src="/assets/pictures/admins-icon.svg" alt="" class="card_img">
+                            <h3 class="card_heading">Admins</h3>
+                        </div>
+                        <p class="total">16</p>
+                    </a>
+
+                    <!-- user status -->
+                    <a href="./users.html" class="card">
+                        <div class="card_info">
+                            <img src="/assets/pictures/users_icon.svg" alt="" class="card_img">
+                            <h3 class="card_heading">Users</h3>
+                        </div>
+                        <p class="total">20</p>
+                    </a>
+                </div>
+            </main>
+
+            <!-- footer -->
+            <footer id="footer">
+                © 2022 - <span>falcon</span> all right reserved
+            </footer>
+        </section>
+        <!-- main section ends here -->
+    </div>
+</body>
+
+</html>

@@ -13,6 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
+        //comment
         Schema::create('subscriptions', function (Blueprint $table) {
             $table->id();
             $table->tinyInteger('status')->default('0');// subsription status , From view file this will send 1

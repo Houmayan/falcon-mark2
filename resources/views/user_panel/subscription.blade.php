@@ -7,18 +7,23 @@
 @endsection
 
 @section('main')
+@foreach ($data as $item)
+    
+    @if ($item -> statusOfSub == '1' && $item -> email ==  Auth::user()->email )
     <main id="subscription">
         <div class="card_container">
             <div class="card plan">
-                <h3 class="plan_name">Basic</h3>
+                <h3 class="plan_name">{{ $item->plan }}</h3>
                 <div>
-                    <p>Started <span>10 Nov, 2022</span></p>
+                    {{-- \Carbon\Carbon::parse($user->from_date)->format('d/m/Y') --}}
+                    <p>Started <span>{{ \Carbon\Carbon::parse($item-> created_at)->format('d/m/Y') }}</span></p>
                     <p>Ends <span>10 Dec, 2022</span></p>
                     <a href="{{ route('plans') }}">
                         <span>Change Plan</span>
                     </a>
                 </div>
             </div>
+            {{-- $item-> created_at --}}
 
             <div class="card">
                 <h3 class="heading">Details</h3>
@@ -48,5 +53,12 @@
         </div>
 
         <img src="{{ asset('assets/pictures/subscription_illustration.svg') }}" alt="" class="illustration">
+    
     </main>
+    @else
+        <h2>You have not Purchesed any Plan !</h2>
+        <a href="{{route('plans')}}"><h1>Click here</h1></a>
+    @endif
+   
+    @endforeach
 @endsection

@@ -71,6 +71,7 @@ $intent = $payment_intent->client_secret;
 
                         {{-- <input type="hidden" name="status" value=""> --}}
                         <input type="hidden" name="method" value="card">
+                        <input type="hidden" name="statusOfSub" value="1">
                         <input type="hidden" name="plan" value="{{ $name = request('name') }}">
                         <input type="hidden" name="price" value="{{ $price = request('price') }}">
                         <input type="hidden" name="tprice" value="{{$amount/100}}">
@@ -141,6 +142,7 @@ $intent = $payment_intent->client_secret;
                         @csrf
                         <input type="hidden" name="status" value="0">
                         <input type="hidden" name="method" value="card">
+                        <input type="hidden" name="statusOfSub" value="1">
                         <input type="hidden" name="plan" value="{{ $name = request('name') }}">
                         <input type="hidden" name="price" value="{{ $price = request('price') }}">
                         <input type="hidden" name="tprice" value="{{$amount/100}}">
@@ -207,6 +209,7 @@ $intent = $payment_intent->client_secret;
                         @csrf
                         <input type="hidden" name="status" value="0">
                         <input type="hidden" name="method" value="card">
+                        <input type="hidden" name="statusOfSub" value="1">
                         <input type="hidden" name="plan" value="{{ $name = request('name') }}">
                         <input type="hidden" name="price" value="{{ $price = request('price') }}">
                         <input type="hidden" name="tprice" value="{{$amount/100}}">

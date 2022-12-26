@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SubscriptionController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\query_form;
 use Illuminate\Support\Facades\Route;
@@ -29,9 +30,10 @@ Route::get('/connection', function () {
     return view('user_panel.connection');
 })->middleware(['auth', 'verified'])->name('connection');
 // subscription
-Route::get('/subscription', function () {
-    return view('user_panel.subscription');
-})->middleware(['auth', 'verified'])->name('subscription');
+
+Route::get('/subscription',[SubscriptionController::class,'subcript'])->name('subscription');
+
+
 // dues
 Route::get('/dues', function () {
     return view('user_panel.dues');

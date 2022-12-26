@@ -21,6 +21,7 @@ class CheckoutController extends Controller
 
     public function afterPayment(Request $request)
     {   
+        $statusOfSub = $request->get('statusOfSub');
         $name = $request->get('name');
         $price= $request->get('price');
         $method =$request->get('method');
@@ -37,6 +38,7 @@ class CheckoutController extends Controller
 
         $prod = new Payment();
         // $prod -> status=$status;
+        $prod -> statusOfSub=$statusOfSub;
         $prod -> name=$name;
         $prod -> price=$price;
         $prod -> method=$method;
